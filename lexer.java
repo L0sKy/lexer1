@@ -2,7 +2,7 @@ import java.io.*;
 
 public class lexer {
     public static void main(String[] args) throws Exception{
-        File in = new File("E:\\java\\IdeaProjects\\token_ana\\src\\in.txt");
+        File in = new File(args[0]);
         Reader r = new FileReader(in);
         BufferedReader br = new BufferedReader(r);
         String line = br.readLine();
