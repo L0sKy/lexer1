@@ -13,13 +13,13 @@ public class lexer {
         }
         String[] tokens = text.split(" +");
         for(int i = 0; i < tokens.length; i++){
-           System.out.println(tokens[i]);
-//             try {
-//                 token_analysis(tokens[i]);
-//             }catch (Exception e){
-//                 System.out.println("Unknown");
-//                 break;
-//             }
+//            System.out.println(tokens[i]);
+            try {
+                token_analysis(tokens[i]);
+            }catch (Exception e){
+                System.out.println("Unknown");
+                break;
+            }
         }
         br.close();
         r.close();
@@ -90,7 +90,7 @@ public class lexer {
             String other;
             switch (token.substring(0,1)) {
                 case ":":
-                    if(token.charAt(1)!='=') {
+                    if(token.length()==1||token.charAt(1)!='=') {
                         System.out.println("Colon");
                         other = token.substring(1);
                         token_analysis(other);
