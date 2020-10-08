@@ -13,13 +13,13 @@ public class lexer {
         }
         String[] tokens = text.split(" +");
         for(int i = 0; i < tokens.length; i++){
-//            System.out.println(tokens[i]);
-            try {
-                token_analysis(tokens[i]);
-            }catch (Exception e){
-                System.out.println("Unknown");
-                break;
-            }
+           System.out.println(tokens[i]);
+//             try {
+//                 token_analysis(tokens[i]);
+//             }catch (Exception e){
+//                 System.out.println("Unknown");
+//                 break;
+//             }
         }
         br.close();
         r.close();
